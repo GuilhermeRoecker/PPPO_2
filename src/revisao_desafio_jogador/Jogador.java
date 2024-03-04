@@ -1,4 +1,4 @@
-package Revisao;
+package revisao_desafio_jogador;
 
 public class Jogador {
     private String nome;

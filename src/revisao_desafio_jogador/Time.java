@@ -1,4 +1,4 @@
-package Revisao;
+package revisao_desafio_jogador;
 
 import java.util.ArrayList;
 
@@ -9,6 +9,7 @@ public class Time {
 
 
     public Time(String nome, ArrayList<Jogador> jogadores) {
+        super();
         this.nome = nome;
         this.jogadores = jogadores;
     }
