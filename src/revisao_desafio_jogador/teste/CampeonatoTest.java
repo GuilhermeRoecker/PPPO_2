@@ -1,4 +1,4 @@
-package revisao_desafio_jogador.Testes;
+package revisao_desafio_jogador.teste;
 
 import static org.junit.Assert.assertEquals;
 
