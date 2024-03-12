@@ -7,7 +7,7 @@ public class contaPoupanca extends contaBancaria {
     private int qtSaqueMes;
     private int mesAtual;
 
-    public contaPoupanca(int numeroConta,double saldo, int qtSaqueMes ){
+    public contaPoupanca(int numeroConta,double saldo ){
         super();
         qtSaqueMes = 5;
         mesAtual = LocalDate.now().getMonthValue();
