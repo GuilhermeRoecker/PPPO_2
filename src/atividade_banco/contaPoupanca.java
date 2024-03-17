@@ -8,7 +8,7 @@ public class contaPoupanca extends contaBancaria {
     private int mesAtual;
 
     public contaPoupanca(int numeroConta,double saldo ){
-        super();
+        super(numeroConta, saldo);
         qtSaqueMes = 5;
         mesAtual = LocalDate.now().getMonthValue();
     }
@@ -17,15 +17,15 @@ public class contaPoupanca extends contaBancaria {
     public boolean saque(double valor){
         LocalDate hoje = LocalDate.now();
             if(hoje.getMonthValue() != mesAtual){
-                qtSaqueMes = 0;
-        if(valor <= getSaldo() && getQtSaqueMes() <=5 && getQtSaqueMes() > 0){
+                qtSaqueMes = 5;
+                mesAtual =  hoje.getMonthValue();
+            }
+        if(valor <= getSaldo() && getQtSaqueMes() > 0){
             setSaldo(getSaldo() - valor);
             qtSaqueMes -=1;
             return true;
-        }
+        } return false;
     }
-            return false;
-}
 
     @Override
     public String toString() {

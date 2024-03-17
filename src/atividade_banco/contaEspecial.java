@@ -11,18 +11,13 @@ public class contaEspecial extends contaBancaria {
         if(valor <= getSaldo() + getLimite()){
             setSaldo(getSaldo() - valor);
             return true;
-        } else return false;
+        } return false;
     }
 
     //Construtores
     public contaEspecial(int numeroConta , double saldo, double limite){
         super(numeroConta, saldo);
         setLimite(limite);
-        }
-
-    public contaEspecial(){
-        super();
-        limite = 1000;
         }
 
     public double getLimite() {
