@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Leitura_Escrita",
+            "request": "launch",
+            "mainClass": "Leitura_Escrita.Leitura_Escrita",
+            "projectName": "POO 2 -2024_6f887f65"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
