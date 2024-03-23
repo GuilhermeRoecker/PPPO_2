@@ -13,7 +13,7 @@ public class arquivoContas {
     public static void main(String[] args) {
         ArrayList<contaBancaria> contas = new ArrayList<contaBancaria>();
         try {
-            FileReader fr = new FileReader("src\\contas.txt");
+            FileReader fr = new FileReader("contas.txt");
             BufferedReader br = new BufferedReader(fr);
             
             String linha= "";
@@ -49,3 +49,4 @@ public class arquivoContas {
         }
     }
 }
+

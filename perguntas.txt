@@ -1,0 +1,50 @@
+A Terra é o terceiro planeta do Sistema Solar, Verdadeiro
+O ser humano tem cinco sentidos, Verdadeiro
+O Monte Everest é a montanha mais alta do mundo, Verdadeiro
+A água ferve a 90 graus Celsius ao nível do mar, Falso
+O Sol é uma estrela, Verdadeiro
+A Grande Muralha da China é visível do espaço, Falso
+O coração humano tem quatro câmaras, Verdadeiro
+A luz solar chega à Terra em 8 minutos, Verdadeiro
+O som viaja mais rápido que a luz, Falso
+O Oceano Atlântico é o maior oceano da Terra, Falso
+A Lua é um planeta, Falso
+O elemento químico ouro tem o símbolo 'Au', Verdadeiro
+O diamante é o material mais duro conhecido pelo homem, Verdadeiro
+A fórmula química da água é H2O, Verdadeiro
+A velocidade da luz é de aproximadamente 300.000 km/s, Verdadeiro
+O ser humano tem 206 ossos no corpo adulto, Verdadeiro
+A capital do Brasil é Buenos Aires, Falso
+O sangue de uma lesma é verde, Verdadeiro
+Vênus é o planeta mais quente do Sistema Solar, Verdadeiro
+O chocolate é tóxico para os cães, Verdadeiro
+O Brasil é o quinto maior país do mundo em área territorial, Verdadeiro
+A velocidade do som é de aproximadamente 1235 km/h, Verdadeiro
+O código genético humano é composto por 24 pares de cromossomos, Falso
+A capital da Austrália é Sydney, Falso
+O átomo é a menor partícula de um elemento químico, Falso
+A luz visível ocupa apenas uma pequena parte do espectro eletromagnético, Verdadeiro
+O idioma mais falado no mundo é o inglês, Falso
+A pele é o maior órgão do corpo humano, Verdadeiro
+O cão é um descendente direto do lobo, Verdadeiro
+A Amazônia é a maior floresta tropical do mundo, Verdadeiro
+A lua cheia ocorre uma vez por mês, Verdadeiro
+O café é originário da América do Sul, Falso
+O elemento químico com o maior número atômico é o urânio, Falso
+A teoria da relatividade foi proposta por Isaac Newton, Falso
+O futebol é o esporte mais popular do mundo, Verdadeiro
+A pirâmide alimentar é uma representação gráfica das proporções de alimentos que devemos consumir diariamente, Verdadeiro
+O camaleão muda de cor para se camuflar no ambiente, Falso
+A água é composta por dois átomos de hidrogênio e um de oxigênio, Verdadeiro
+A baleia azul é o maior animal vivo da Terra, Verdadeiro
+O Titanic foi o primeiro navio a usar um sistema de telegrafia sem fio, Falso
+A teoria do Big Bang descreve a origem do universo, Verdadeiro
+A penicilina foi descoberta por acidente, Verdadeiro
+O sangue de um polvo é azul, Verdadeiro
+A muralha de Adriano foi construída para proteger o Império Romano dos Vikings, Falso
+A fotossíntese ocorre nas plantas durante a noite, Falso
+O chocolate foi originalmente usado como moeda pelos Maias, Verdadeiro
+A Torre Eiffel foi construída para a Exposição Universal de 1889, em Paris, Verdadeiro
+O ser humano compartilha 98% do DNA com os chimpanzés, Verdadeiro
+A Antártida é o maior deserto do mundo, Verdadeiro
+O som não pode se propagar no vácuo, Verdadei
