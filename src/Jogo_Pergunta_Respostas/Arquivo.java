@@ -1,7 +1,9 @@
 package Jogo_Pergunta_Respostas;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Arquivo {
@@ -40,9 +42,10 @@ public class Arquivo {
             BufferedReader br = new BufferedReader(fr);
 
             String linha = "";
-
-
-            
+            while((linha = br.readLine()) != null){   
+            }
+            fr.close();
+            br.close();
             
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,17 +55,31 @@ public class Arquivo {
     //Arraylist <Perguntas>
     private ArrayList<Pergunta> perguntas = new ArrayList<Pergunta>();
 
-    int qtLinha = getTotalPerguntas();
 
-    do{
-        
-    }while()
-    
+
     //Path
 
-
-
     //Carregar arqivo
+    public void carregarArquivo(){
+
+        try {
+
+
+            FileReader fr = new FileReader("perguntas.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String linha = "";
+            while((linha = br.readLine()) != null){   
+            }
+            fr.close();
+            br.close();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
     //Sortear pergunta
     //Conferir
 
