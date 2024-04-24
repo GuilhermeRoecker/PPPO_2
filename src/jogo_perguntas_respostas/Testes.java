@@ -3,8 +3,6 @@ package jogo_perguntas_respostas;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import java.util.Objects;
-
 
 public class Testes {
 
@@ -25,7 +23,4 @@ public class Testes {
         Resposta r = new Resposta(pergunta, true);
         assertEquals("erro", r.correcao());
     }
-
-
-    
 }
