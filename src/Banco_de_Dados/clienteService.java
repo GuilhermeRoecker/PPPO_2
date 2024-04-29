@@ -5,19 +5,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import Banco_de_Dados.model.cidade;
+import Banco_de_Dados.model.cliente;
 
-public class cidadeService {
-    
-    public static int insereCidade(cidade c){
+public class clienteService {
+
+    public static int insereCliente(cliente c) {
         try {
-
             Connection conn = conexao.conectaMySql();
 
-            String sql = "INSERT INTO cidade (nome,uf) values(?,?)";
+            String sql = "INSERT INTO cliente (nome,idade,sexo,cidade) values(?,?,?,?)";
             PreparedStatement pr = conn.prepareStatement(sql);
             pr.setString(1, c.getNome());
-            pr.setString(2, c.getUf());
+            pr.setInt(2, c.getIdade());
+            pr.setString(3, c.getSexo());
+            pr.setInt(4, c.getCidade().getId());
             int total = pr.executeUpdate();
             conn.close();
             return total;
@@ -28,16 +29,17 @@ public class cidadeService {
         }
     }
 
-
-    public static int alteraCidade(cidade c){
+    public static int alteraCidade(cliente c) {
         try {
             Connection conn = conexao.conectaMySql();
 
-            String sql = "update cidade set nome=?, uf=? where id=?";
+            String sql = "update cliente set nome=?, idade=?, sexo=?, cidade=? where id=?";
             PreparedStatement pr = conn.prepareStatement(sql);
             pr.setString(1, c.getNome());
-            pr.setString(2, c.getUf());
-            pr.setInt(3, c.getId());
+            pr.setInt(2, c.getIdade());
+            pr.setString(3, c.getSexo());
+            pr.setInt(4, c.getCidade().getId());
+            pr.setInt(5, c.getId());
             int total = pr.executeUpdate();
             conn.close();
             return total;
@@ -48,11 +50,11 @@ public class cidadeService {
         }
     }
 
-    public static int excluiCidade(cidade c){
+    public static int excluiCliente(cliente c) {
         try {
             Connection conn = conexao.conectaMySql();
 
-            String sql = "delete from cidade where id=?";
+            String sql = "delete from cliente where id=?";
             PreparedStatement pr = conn.prepareStatement(sql);
             pr.setInt(1, c.getId());
             int total = pr.executeUpdate();
@@ -65,57 +67,40 @@ public class cidadeService {
         }
     }
 
-    public static ArrayList<cidade> listAll(){
-        ArrayList <cidade> lista = new ArrayList<cidade>();
-        try{
-            String sql = "select * from cidade";
+    public static ArrayList<cliente> listAll() {
+
+        ArrayList<cliente> lista = new ArrayList<cliente>();
+
+        try {
+            String sql = "select * from cliente";
             Connection conn = conexao.conectaMySql();
             PreparedStatement pr = conn.prepareStatement(sql);
             ResultSet rs = pr.executeQuery();
 
             while (rs.next()) {
-                cidade c = new cidade();
+                cliente c = new cliente();
                 c.setId(rs.getInt("id"));
-                c.setNome(rs.getString("nome"));
-                c.setUf(rs.getString("uf"));
-                lista.add(c); 
+                c.setNome(rs.getString("Nome"));
+                c.setSexo(rs.getString("Sexo"));
+                c.setIdade(rs.getInt("Idade"));
+                c.setCidade(cidadeService.findById(rs.getInt("cidade")));
+                lista.add(c);
             }
             conn.close();
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return lista;
     }
 
-    public static cidade findById(int id){
-        cidade c = new cidade();
-        try{
-            String sql = "select * from cidade where id = ?";
-            Connection conn = conexao.conectaMySql();
-            PreparedStatement pr = conn.prepareStatement(sql);
-            pr.setInt(1, id);
-            ResultSet rs = pr.executeQuery();
-
-            while (rs.next()) {
-                c.setId(rs.getInt("id"));
-                c.setNome(rs.getString("nome"));
-                c.setUf(rs.getString("uf"));
-            }
-            conn.close();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        return c;
-    }
-
-    public static int limapTblCidade(){
+    public static int limpaTblCliente() {
         try {
             Connection conn = conexao.conectaMySql();
 
-            String sql = "delete from cidade where id >0 ";
+            String sql = "delete from cliente where id > 0";
             PreparedStatement pr = conn.prepareStatement(sql);
             int total = pr.executeUpdate();
-            sql = "ALTER TABLE cidade auto_increment = 0";
+            sql = "Alter table cliente auto_increment = 0";
             pr = conn.prepareStatement(sql);
             pr.executeUpdate();
             conn.close();
