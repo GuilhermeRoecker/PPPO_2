@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import Banco_de_Dados.model.cidade;
 import Banco_de_Dados.model.cliente;
 
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 
 import Banco_de_Dados.cidadeService;
 import Banco_de_Dados.clienteService;
@@ -17,7 +17,7 @@ import Banco_de_Dados.conexao;
 
 public class bancoDeDados_Test {
     
-    @Before
+    @BeforeAll
     public void inicializa(){
         clienteService.limpaTblCliente();
         cidadeService.limapTblCidade();
